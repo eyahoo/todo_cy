@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Todo, ToggleTodo} from "./types"
 import {TodoList} from "./TodoList";
 import {AddTodoForm} from "./AddTodoForm";
+import {Container} from "./Style";
 
 const initialTodos: Array<Todo> = []
 
@@ -30,10 +31,15 @@ const App: React.FC = () => {
 
     return (
         <React.Fragment>
-            <h1>To do List</h1>
-            <TodoList todos={todos} toggleTodo={toggleTodo}/>
-            <AddTodoForm addTodo={addTodo}/>
-
+            <Container>
+                <h1>📚 To do List 📚</h1>
+            </Container>
+            <Container>
+                <TodoList todos={todos} toggleTodo={toggleTodo}/>
+            </Container>
+            <Container>
+                <AddTodoForm addTodo={addTodo}/>
+            </Container>
         </React.Fragment>
     );
 }

@@ -30,9 +30,19 @@ export const Checkbox = styled.input`
 
 `
 
-
 export const List = styled.li`
   list-style-type: upper-roman;
-  margin-left: 20px;
+  //margin-left: 20px;
   font-family: Courier New;
 `
+
+export const Container = styled.div`
+  //border: 3px solid rgba(124, 128, 0, 0.11);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
+
+
+// export const Container = styled.div(props => ({}))
+
