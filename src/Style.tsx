@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+type ToolsHeaderProps = {
+    complete: string
+}
+
 //Question : font 만 따로 빼서 Button + font / Input + font로 쓸 수 있게 하는 방법
 
 export const Button = styled.button`
@@ -50,6 +54,9 @@ export const Frame = styled.div`
   background-color: darkslategray;
 `
 
+export const Label = styled.label<ToolsHeaderProps>`
+  //ext-decoration: line-through;
+  text-decoration: ${(props: ToolsHeaderProps) => props.complete};
 
-// export const Container = styled.div(props => ({}))
-
+}
+`
