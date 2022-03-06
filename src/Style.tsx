@@ -27,20 +27,27 @@ export const Input = styled.input`
 
 export const Checkbox = styled.input`
   margin-right: 20px;
-
 `
 
 export const List = styled.li`
   list-style-type: upper-roman;
-  //margin-left: 20px;
   font-family: Courier New;
 `
 
 export const Container = styled.div`
   //border: 3px solid rgba(124, 128, 0, 0.11);
+  font-color: #f3f8f8;
   display: flex;
   justify-content: center;
   text-align: center;
+`
+
+export const Frame = styled.div`
+  color: white;
+  border: 20px solid rgba(255, 140, 0, 0.24);
+  height: 900px;
+  padding-bottom: 20px;
+  background-color: darkslategray;
 `
 
 
