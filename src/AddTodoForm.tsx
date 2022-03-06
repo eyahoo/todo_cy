@@ -1,10 +1,10 @@
 import React, {useState, ChangeEvent, FormEvent} from "react"
 import {addTodo} from "./types";
+import {Input, Button} from "./Style"
 
 interface AddTodoFormProps {
     addTodo: addTodo;
 }
-
 
 export const AddTodoForm: React.FC<AddTodoFormProps> = ({addTodo}) => {
     const [newTodo, setNewTodo] = useState<string>("");
@@ -23,8 +23,8 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({addTodo}) => {
 
     return (
         <form>
-            <input type="text" value={newTodo} onChange={handleChange}/>
-            <button type="submit" onClick={handleSubmit}>Add Todo</button>
+            <Input type="text" value={newTodo} onChange={handleChange}/>
+            <Button type="submit" onClick={handleSubmit}>Add Todo</Button>
         </form>
     )
 }

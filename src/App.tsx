@@ -3,7 +3,7 @@ import {Todo, ToggleTodo} from "./types"
 import {TodoList} from "./TodoList";
 import {AddTodoForm} from "./AddTodoForm";
 
-const initialTodos: Array<Todo> = [{text: "To Do List", complete: false}]
+const initialTodos: Array<Todo> = []
 
 const App: React.FC = () => {
     const [todos, setTodos] = useState(initialTodos)
