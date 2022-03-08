@@ -9,6 +9,7 @@ const initialTodos: Array<Todo> = []
 const App: React.FC = () => {
     const [todos, setTodos] = useState(initialTodos)
 
+
     const toggleTodo: ToggleTodo = (selectedTodo: Todo) => {
         const newTodos = todos.map(todo => {
             if (todo === selectedTodo) {
@@ -17,8 +18,6 @@ const App: React.FC = () => {
                     complete: !todo.complete
                 }
             }
-
-
             return todo
         })
         setTodos(newTodos)
@@ -28,6 +27,10 @@ const App: React.FC = () => {
         newTodo.trim() !== "" && setTodos([...todos, {text: newTodo, complete: false}])
     }
 
+    const deleteTodo = (deleteItem: Todo) => {
+        deleteItem.text.trim() !== "" && setTodos(todos.filter(item => item.text !== deleteItem.text))
+    }
+
     return (
         <React.Fragment>
             <Frame>
@@ -35,7 +38,7 @@ const App: React.FC = () => {
                     <h1>📚 To do List 📚</h1>
                 </Container>
                 <Container>
-                    <TodoList todos={todos} toggleTodo={toggleTodo}/>
+                    <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
                 </Container>
                 <Container>
                     <AddTodoForm addTodo={addTodo}/>

@@ -27,7 +27,6 @@ const Input = styled.input`
 
 `
 
-
 const Checkbox = styled.input`
   margin-right: 20px;
 `
@@ -38,7 +37,6 @@ const List = styled.li`
 `
 
 const Container = styled.div`
-  //border: 3px solid rgba(124, 128, 0, 0.11);
   font-color: #f3f8f8;
   display: flex;
   justify-content: center;
@@ -54,9 +52,7 @@ const Frame = styled.div`
 `
 
 const Label = styled.label<ToolsHeaderProps>`
-  //ext-decoration: line-through;
   text-decoration: ${(props: ToolsHeaderProps) => props.complete};
-
 }
 `
 

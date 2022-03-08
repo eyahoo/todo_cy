@@ -9,7 +9,6 @@ interface AddTodoFormProps {
 export const AddTodoForm: React.FC<AddTodoFormProps> = ({addTodo}) => {
     const [newTodo, setNewTodo] = useState<string>("");
 
-
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setNewTodo(e.target.value)
     }
@@ -19,7 +18,6 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({addTodo}) => {
         addTodo(newTodo)
         setNewTodo("");
     }
-    console.log("newTodo", newTodo)
 
     return (
         <form>
